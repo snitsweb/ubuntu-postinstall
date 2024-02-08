@@ -1,8 +1,23 @@
 #!/bin/bash
 
-./scripts/utils
-./scripts/docker
+export YELLOW='\033[1;33m'
+export NC='\033[0m' # No Color
+
+
+sudo apt update
+
+sleep 5
 ./scripts/volta
-./scripts/programms
+sleep 5
 ./scripts/zsh
-./scripts/gnome-extensions
+sleep 5
+./scripts/programms
+sleep 5
+./scripts/php
+sleep 5
+cat ./scripts/docker | zsh
+
+printf "${YELLOW}✅ Done. Now install next gnome extensions:${NC} \n"
+echo "https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/ \n"
+echo "https://extensions.gnome.org/extension/779/clipboard-indicator/ \n"
+echo "https://extensions.gnome.org/extension/1460/vitals/ \n"

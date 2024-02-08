@@ -1,6 +1,0 @@
-#!/bin/bash
-
-sudo apt install -y gnome-extensions
-sudo apt install -y chrome-gnome-shell
-
-# TODO: add scripts for automatic installation

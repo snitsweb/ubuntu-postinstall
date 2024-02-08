@@ -1,46 +1,61 @@
 #!/bin/bash
 
-sudo snap install code --classic
-sudo snap install postman
-sudo snap install zulip
-sudo snap install spotify
-sudo snap install screencloud
-sudo snap install dbeaver-ce
-
+printf "\n${YELLOW}Installing programs with apt...${NC} \n"
 sudo apt install -y htop
-sudo apt install -y ngrok
+curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok
 sudo apt install -y libfuse2
+sudo apt install -y neofetch
+sudo apt install -y filezilla
+sudo apt install -y snapd
+sudo apt install -y gnome-shell-extensions
+sudo apt install -y chrome-gnome-shell
+printf "\n${YELLOW}Apt programs installation completed ✅${NC} \n"
 
-code --install-extension equinusocio.vsc-material-theme-icons
-code --install-extension mhutchie.git-graph
-code --install-extension dbaeumer.vscode-eslint
-code --install-extension ms-azuretools.vscode-docker
-code --install-extension donjayamanne.git-extension-pack
-code --install-extension bmewburn.vscode-intelephense-client
-code --install-extension RamiroBerrelleza.bitbucket-pull-requests
-code --install-extension pranaygp.vscode-css-peek
-code --install-extension Zignd.html-css-class-completion
-code --install-extension tal7aouy.rainbow-bracket
-code --install-extension christian-kohler.npm-intellisense
-code --install-extension christian-kohler.path-intellisense
-code --install-extension TabNine.tabnine-vscode
-code --install-extension streetsidesoftware.code-spell-checker
-code --install-extension SimonSiefke.svg-preview
-code --install-extension aaron-bond.better-comments
-code --install-extension Gruntfuggly.todo-tree
-code --install-extension cweijan.vscode-database-client2
-code --install-extension GrapeCity.gc-excelviewer
-code --install-extension alexdima.copy-relative-path
-code --install-extension yzhang.markdown-all-in-one
-code --install-extension HookyQR.beautify
-code --install-extension formulahendry.auto-close-tag
-code --install-extension kamikillerto.vscode-colorize
-code --install-extension stylelint.vscode-stylelint
-code --install-extension wix.vscode-import-cost
-code --install-extension octref.vetur
-code --install-extension xdebug.php-pack
-code --install-extension MehediDracula.php-namespace-resolver
+printf "\n${YELLOW}Installing programs with snap...${NC} \n"
+sudo /usr/bin/snap install code --classic
+sudo /usr/bin/snap install postman
+sudo /usr/bin/snap install zulip
+sudo /usr/bin/snap install spotify
+sudo /usr/bin/snap install screencloud
+sudo /usr/bin/snap install dbeaver-ce
+printf "\n${YELLOW}Snap programs installation completed ✅${NC} \n"
 
-cp ../libs/jetbrains-toolbox /opt/apps
-sudo chmod +x /opt/apps/jetbrains-toolbox
-/opt/apps/jetbrains-toolbox
+printf "\n${YELLOW}Installing VSCode extensions...${NC} \n"
+/snap/bin/code --install-extension equinusocio.vsc-material-theme-icons
+/snap/bin/code --install-extension mhutchie.git-graph
+/snap/bin/code --install-extension dbaeumer.vscode-eslint
+/snap/bin/code --install-extension ms-azuretools.vscode-docker
+/snap/bin/code --install-extension donjayamanne.git-extension-pack
+/snap/bin/code --install-extension bmewburn.vscode-intelephense-client
+/snap/bin/code --install-extension RamiroBerrelleza.bitbucket-pull-requests
+/snap/bin/code --install-extension pranaygp.vscode-css-peek
+/snap/bin/code --install-extension Zignd.html-css-class-completion
+/snap/bin/code --install-extension tal7aouy.rainbow-bracket
+/snap/bin/code --install-extension christian-kohler.npm-intellisense
+/snap/bin/code --install-extension christian-kohler.path-intellisense
+/snap/bin/code --install-extension TabNine.tabnine-vscode
+/snap/bin/code --install-extension streetsidesoftware.code-spell-checker
+/snap/bin/code --install-extension SimonSiefke.svg-preview
+/snap/bin/code --install-extension aaron-bond.better-comments
+/snap/bin/code --install-extension Gruntfuggly.todo-tree
+/snap/bin/code --install-extension cweijan.vscode-database-client2
+/snap/bin/code --install-extension GrapeCity.gc-excelviewer
+/snap/bin/code --install-extension alexdima.copy-relative-path
+/snap/bin/code --install-extension yzhang.markdown-all-in-one
+/snap/bin/code --install-extension HookyQR.beautify
+/snap/bin/code --install-extension formulahendry.auto-close-tag
+/snap/bin/code --install-extension kamikillerto.vscode-colorize
+/snap/bin/code --install-extension stylelint.vscode-stylelint
+/snap/bin/code --install-extension wix.vscode-import-cost
+/snap/bin/code --install-extension octref.vetur
+/snap/bin/code --install-extension xdebug.php-pack
+/snap/bin/code --install-extension MehediDracula.php-namespace-resolver
+/snap/bin/code --install-extension mads-hartmann.bash-ide-vscode
+printf "\n${YELLOW}VScode plugins installation completed ✅${NC} \n"
+
+printf "\nInstalling JetBrains toolbox...${NC} \n"
+mkdir ~/Apps
+cp ./libs/jetbrains-toolbox ~/Apps
+sudo chmod +x ~/Apps/jetbrains-toolbox
+~/Apps/jetbrains-toolbox
+printf "\n${YELLOW}JetBrains toolbox installation completed ✅${NC} \n"

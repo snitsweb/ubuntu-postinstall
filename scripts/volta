@@ -1,7 +1,9 @@
 #!/bin/bash
 
-curl https://get.volta.sh | bash
-source ~/.bashrc
-volta install node
-volta install yarn@1
-volta install pnpm
+printf "\n${YELLOW}Installing volta...${NC} \n"
+curl "https://get.volta.sh/" | /usr/bin/bash
+
+~/.volta/bin/volta install node
+~/.volta/bin/volta install yarn@1
+~/.volta/bin/volta install pnpm
+printf "\n${YELLOW}Volta installation completed ✅${NC} \n"
