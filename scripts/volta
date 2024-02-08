@@ -1,0 +1,7 @@
+#!/bin/bash
+
+curl https://get.volta.sh | bash
+source ~/.bashrc
+volta install node
+volta install yarn@1
+volta install pnpm

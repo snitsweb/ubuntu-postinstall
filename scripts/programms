@@ -1,0 +1,46 @@
+#!/bin/bash
+
+sudo snap install code --classic
+sudo snap install postman
+sudo snap install zulip
+sudo snap install spotify
+sudo snap install screencloud
+sudo snap install dbeaver-ce
+
+sudo apt install -y htop
+sudo apt install -y ngrok
+sudo apt install -y libfuse2
+
+code --install-extension equinusocio.vsc-material-theme-icons
+code --install-extension mhutchie.git-graph
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension donjayamanne.git-extension-pack
+code --install-extension bmewburn.vscode-intelephense-client
+code --install-extension RamiroBerrelleza.bitbucket-pull-requests
+code --install-extension pranaygp.vscode-css-peek
+code --install-extension Zignd.html-css-class-completion
+code --install-extension tal7aouy.rainbow-bracket
+code --install-extension christian-kohler.npm-intellisense
+code --install-extension christian-kohler.path-intellisense
+code --install-extension TabNine.tabnine-vscode
+code --install-extension streetsidesoftware.code-spell-checker
+code --install-extension SimonSiefke.svg-preview
+code --install-extension aaron-bond.better-comments
+code --install-extension Gruntfuggly.todo-tree
+code --install-extension cweijan.vscode-database-client2
+code --install-extension GrapeCity.gc-excelviewer
+code --install-extension alexdima.copy-relative-path
+code --install-extension yzhang.markdown-all-in-one
+code --install-extension HookyQR.beautify
+code --install-extension formulahendry.auto-close-tag
+code --install-extension kamikillerto.vscode-colorize
+code --install-extension stylelint.vscode-stylelint
+code --install-extension wix.vscode-import-cost
+code --install-extension octref.vetur
+code --install-extension xdebug.php-pack
+code --install-extension MehediDracula.php-namespace-resolver
+
+cp ../libs/jetbrains-toolbox /opt/apps
+sudo chmod +x /opt/apps/jetbrains-toolbox
+/opt/apps/jetbrains-toolbox

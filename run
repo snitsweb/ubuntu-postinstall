@@ -1,0 +1,8 @@
+#!/bin/bash
+
+./scripts/utils
+./scripts/docker
+./scripts/volta
+./scripts/programms
+./scripts/zsh
+./scripts/gnome-extensions
